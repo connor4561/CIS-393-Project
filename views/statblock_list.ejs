@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>D&D 5E Homebrew Monster Editor</title>
+        <meta charset="utf-8">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        
+    </head>
+
+    <body>
+        <header>
+            <a href="about.html"><img src="question mark.png" alt="question mark"></a>
+            <h1>D&D 5E Homebrew Monster Editor</h1>
+            <a href="index.html"><img src="reset.png" alt="reset button"></a>
+        </header>
+
+        <div id="statblock_list-content">
+            <div id="forms">
+                <div id="searches">
+                    <form method="post" action="/name_search">
+                        <label for="name_search">Search by name:</label>
+                        <input type="text" name="name_search" id="name_search">
+                    </form>
+                    <form method="post" action="/CR_search">
+                        <label for="CR_search">Search by challenge rating(CR):</label>
+                        <input type="text" name="CR_search" id="CR_search">
+                    </form>
+                </div>
+                <div>
+                    <form id="name_update" method="post" action="/update_name">
+                        <section>
+                            <label for="prev_name">Name to be changed:</label>
+                            <input type="text" name="prev_name" id="prev_name">
+                        </section>
+                        <section>
+                            <label for="new_name">New name:</label>
+                            <input type="text" name="new_name" id="new_name">
+                        </section>
+                        <button type="submit">Change Name</button>
+                    </form>
+                </div>
+            </div>
+
+            <ul>
+                <% for (let i in data) {%>
+                    <section  class="search_result"><a href="/load?id=<%=data[i].monster_name%>"><li>Name: <%=data[i].monster_name%> &nbsp&nbspCR: <%=data[i].CR%></li></a></section>
+                <%}%>
+            </ul>
+
+
+        </div>
+
+        <footer>
+            <p>Developed by Liam O'Brien | There would probably be legal rights notices here if I intended to host this publicly. | Reset icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+        </footer>
+
+    </body>
+</html>
