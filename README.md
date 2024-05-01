@@ -1,0 +1,9 @@
+First: I typed this file with wordwrap enabled. I'd recommend enabling that (if it isn't already) to follow along.
+My project relies on mongoDB, as well as a few packages which should be visible in the package.json file. "statblocks.json" is my exported database from mongoDB, though the project does not rely on it at all. It works perfectly fine with no existing data, because it is primarily designed to generate new content. It is just also capable of accessing, modifying, and deleting existing data. The database I provided just includes a few good examples of what finished products can look like, rather than the default. Below are a few random pieces of helpful information, in no particular order:
+
+index.html is the recommended landing page, as it is always populated with default data. The next page I would recommend visiting is the about page, accessible by the question mark in the top left. It explains a few features of the website, and also how to get around.
+There are a few search boxes that do not have a submit button on the listing/searching page. Just press enter to use them, that is intended streamlining.
+The forward and back buttons of the web browser were never a consideration in my design process. The website can be completely navigated (and even refreshed, functionally) without using the browser's forward and back. I don't think they break much, they might even break nothing, but I provide no guarantees. If Canvas can tell us not to use the forward and back buttons sometimes, so can I.
+
+My biggest regret on this project (probably) is not having the time to add confirmation prompts on the "dangerous" buttons. The ones that instantly delete your progress if pressed. I considered moving the dangerous buttons away from the save button, but it didn't look very good. I preserved the aesthetics, at the cost of a little risk every time you go to save.
+Also that it was late, but not very late. I was so close.
